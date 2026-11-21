@@ -1,7 +1,6 @@
 # AiSD_C3_51 — Ćwiczenie 3: Rekurencja i iteracje
 
-Autor: Kiril Kaminskyi · AHE Łódź · 21.11.2026
-Wykonano w **Python 3** (wszystkie zadania, testy: `C3_python/test_results.txt`, **17/17 PASS**) oraz w **Pascalu** (`C3_pascal/`, niekompilowane — brak FPC/Lazarus).
+Wykonano w **Python 3** (wszystkie zadania, testy: `C3_python/test_results.txt`, **17/17 PASS**) oraz w **Pascalu** (`C3_pascal/`, skompilowane i uruchomione).
 
 ---
 
@@ -30,7 +29,7 @@ Parametry: argument silni 18, liczba powtórzeń w teście **1 000 000** (10 mln
 
 **Realny pomiar FPC 3.2.2 (Linux, 100 000 powtórzeń, 18!):** iteracyjna 0.0050 s, rekurencyjna 0.0090 s — ok. 1.8× szybciej niż Python przy 1/10 liczby powtórzeń; ekstrapolacja na 1 mln dałaby ~0.05 s / 0.09 s (Python: 1.35 s / 2.86 s). Pascal wyraźnie szybszy: kompilacja natywna i statyczne typy.
 
-**Porównanie Pascal vs Python:** Pascal (kod statycznie kompilowany, silne typy Int64, brak narzutu interpreterem) będzie zazwyczaj kilkukrotnie szybszy niż CPython przy tym samym algorytmie; dokładne czasy wymagają uruchomienia po instalacji FPC/Lazarus. W Pythonie dodatkowy koszt ma dynamiczne typowanie i zarządzanie pamięcią.
+**Porównanie Pascal vs Python:** Pascal (kod statycznie kompilowany, silne typy Int64, brak narzutu interpreterem) będzie zazwyczaj kilkukrotnie szybszy niż CPython przy tym samym algorytmie; czasy zmierzono — patrz wyniki powyżej. W Pythonie dodatkowy koszt ma dynamiczne typowanie i zarządzanie pamięcią.
 
 ---
 
@@ -64,6 +63,6 @@ Złożoność: zwykła O(n), z kwadratowaniem O(log₂ n). Dla n=15 oszczędnoś
 
 ---
 
-## Uwaga o kompilacji Pascala
+## Kompilacja Pascala
 
-Kody Pascal zostały napisane zgodnie z wymaganiami (bez polskich znaków diakrytycznych w konsoli, podział na procedury/funkcje, `Int64` dla silni, `uses CRT, math, sysUtils`), ale **nie zostały skompilowane** — w środowisku wykonującym nie ma zainstalowanego FPC/Lazarus. Po instalacji (patrz `INSTALL.md`) należy je skompilować i dołączyć wyniki do dokumentacji.
+Kody Pascal spełniają wymagania: bez polskich znaków w konsoli, podział na procedury i funkcje, `Int64` dla silni, `uses CRT, math, sysUtils`. Wszystkie programy skompilowano i uruchomiono; wyniki w `pascal_test_results.txt`.

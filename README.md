@@ -2,7 +2,6 @@
 
 Rozwiązania ćwiczeń `AiSD_C1_60`, `AiSD_C2_60`, `AiSD_C3_51` (autor materiałów: Bohdan Szymczak).
 
-**Autor rozwiązań:** Kiril Kaminskyi · **Data:** 21.11.2026
 
 ## Status
 

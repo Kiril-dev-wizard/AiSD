@@ -1,6 +1,5 @@
 # AiSD_C2_60 — Ćwiczenie 2: Implementacja prostych algorytmów numerycznych
 
-Autor: Kiril Kaminskyi · AHE Łódź · 21.11.2026
 Wykonano w **Python 3** (wszystkie 5 zadań) oraz w **Pascalu** (`C2_pascal/` — wszystkie 5 programów skompilowane FPC 3.2.2 i uruchomione; wyniki w `pascal_test_results.txt`).
 
 Każdy program podzielony jest na funkcje zgodnie z zasadami programowania strukturalnego, zawiera komentarze i został przetestowany. Wynik testów: `C2_python/test_results.txt` — **21/21 PASS**.

@@ -37,7 +37,6 @@ def make(md, pdf, title):
     margin = 18*mm
     y = h - margin
     c.setFont(BOLD, 16); c.drawString(margin, y, title); y -= 12*mm
-    c.setFont(FONT, 8); c.drawString(margin, y, "Kiril Kaminskyi | AHE Lodz | AiSD | 21.11.2026"); y -= 9*mm
     text = open(md, encoding="utf-8").read()
     for raw in text.split("\n"):
         raw = raw.rstrip()

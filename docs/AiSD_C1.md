@@ -1,6 +1,5 @@
 # AiSD_C1_60 — Ćwiczenie 1: Proste algorytmy
 
-Autor rozwiązania: Kiril Kaminskyi · AHE Łódź · 21.11.2026
 Materiał źródłowy: Bohdan Szymczak, `AiSD_C1_60.pdf`
 
 Każde zadanie zawiera: **schemat blokowy** (SVG/PDF w `C1_schematy/diagrams/`), **opis językiem naturalnym**, **listę kroków** i **test poprawności** (analiza → scenariusze → wykonanie).
