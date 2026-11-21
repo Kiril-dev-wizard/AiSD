@@ -1,0 +1,8 @@
+digraph Z3 { rankdir=TB; node [shape=box fontname="DejaVu Sans"];
+ start[shape=ellipse label="START"]; in[label="Wczytaj L"];
+ neg[shape=diamond label="L < 0 ?"]; abs[label="L := -L"];
+ init[label="S := 0"]; dec[shape=diamond label="L > 0 ?"];
+ add[label="S := S + (L mod 10)"]; div[label="L := L div 10"];
+ out[label="Wypisz S"]; stop[shape=ellipse label="STOP"];
+ start->in->neg; neg->abs[label="tak"]; neg->init[label="nie"]; abs->init->dec;
+ dec->add[label="tak"]; add->div->dec; dec->out[label="nie"]; out->stop; }

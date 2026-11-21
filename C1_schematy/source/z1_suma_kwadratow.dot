@@ -1,0 +1,7 @@
+digraph Z1 { rankdir=TB; node [shape=box fontname="DejaVu Sans"];
+ start[shape=ellipse label="START"];
+ in[label="Wczytaj L0, n"]; init[label="S := 0\ni := 0"];
+ dec[shape=diamond label="i < n ?"];
+ loop[label="S := S + (L0 + i)^2\ni := i + 1"];
+ out[label="Wypisz S"]; stop[shape=ellipse label="STOP"];
+ start->in->init->dec; dec->loop[label="tak"]; loop->dec; dec->out[label="nie"]; out->stop; }

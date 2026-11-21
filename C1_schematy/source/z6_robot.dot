@@ -1,0 +1,9 @@
+digraph Z6 { rankdir=TB; node [shape=box fontname="DejaVu Sans"];
+ start[shape=ellipse label="START"]; in[label="Wczytaj xr, yr"];
+ row[label="wyznacz wiersz docelowy: yE = 6 (srodek krótszego boku)"];
+ col[label="wybierz kolumne wolną\nod robotów (najblizsza xr)"];
+ vert[label="idz w kolumnie do yE:\nn = ceil(|yr-yE|*2 / 0,75) kroków"];
+ turn[label="obrot o 90° w strone wyjscia"];
+ hor[label="idz do x=22 omijajac\nzajete miejsca (najkrotsza trasa)"];
+ out[label="Wyjdz z magazynu"]; stop[shape=ellipse label="STOP"];
+ start->in->row->col->vert->turn->hor->out->stop; }

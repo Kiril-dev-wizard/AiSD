@@ -1,0 +1,14 @@
+digraph Z5 { rankdir=TB; node [shape=box fontname="DejaVu Sans"];
+ start[shape=ellipse label="START"];
+ last[shape=diamond label="Ostatnie polaczenie\nna ekranie glownym ?"];
+ tap1[label="Dotknij przycisk\nODDZWON (1 czynnosc)"];
+ fav[shape=diamond label="Kontakt w ulubionych/\nwidzecie (1 dotkniecie) ?"];
+ tap2[label="Dotknij ulubiony\n(1-2 czynnosci)"];
+ book[shape=diamond label="Numer w ksiazce ?"];
+ search[label="Telefon -> wyszukaj po imieniu\n-> dotknij kontaktu -> POLACZ"];
+ dial[label="Telefon -> klawiatura ->\nwpisz numer -> POLACZ"];
+ end[shape=ellipse label="KONIEC polaczenia"];
+ start->last; last->tap1[label="tak"]; last->fav[label="nie"];
+ fav->tap2[label="tak"]; fav->book[label="nie"];
+ book->search[label="tak"]; book->dial[label="nie"];
+ tap1->end; tap2->end; search->end; dial->end; }

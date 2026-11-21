@@ -1,0 +1,10 @@
+digraph Z2 { rankdir=TB; node [shape=box fontname="DejaVu Sans"];
+ start[shape=ellipse label="START"]; in[label="Wczytaj R"];
+ d4[shape=diamond label="R mod 4 = 0 ?"];
+ d100[shape=diamond label="R mod 100 = 0 ?"];
+ d400[shape=diamond label="R mod 400 = 0 ?"];
+ tak[label="Wypisz: PRZESTEPNY"]; nie[label="Wypisz: NIEPRZESTEPNY"];
+ stop[shape=ellipse label="STOP"];
+ start->in->d4; d4->nie[label="nie"]; d4->d100[label="tak"];
+ d100->tak[label="nie"]; d100->d400[label="tak"];
+ d400->tak[label="tak"]; d400->nie[label="nie"]; tak->stop; nie->stop; }

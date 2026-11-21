@@ -1,0 +1,26 @@
+=== C3 tests ===
+PASS | silnia(0) iter=rec
+PASS | silnia(1) iter=rec
+PASS | silnia(5) iter=rec
+PASS | silnia(10) iter=rec
+PASS | silnia(18) iter=rec
+PASS | silnia(20) iter=rec
+PASS | 18! wartosc
+PASS | suma cyfr 0
+PASS | suma cyfr 258
+PASS | suma cyfr -258
+PASS | suma cyfr 999
+PASS | suma cyfr 100
+PASS | potega 2^0 4 metody
+PASS | potega 2^1 4 metody
+PASS | potega 2^10 4 metody
+PASS | potega 2^15 4 metody
+PASS | potega 3.5^7 4 metody
+--- TIMING (real) ---
+n=18, repeats=1000000
+iterative: 1.3509s, recursive: 2.8636s, ratio: 0.47
+--- multiplications for a=2, n=0..15 (sq-iter vs iter) ---
+n= 5: iter= 5, sq-iter= 4
+n=10: iter=10, sq-iter= 5
+n=15: iter=15, sq-iter= 7
+TOTAL: 17 | PASSED: 17 | FAILED: 0

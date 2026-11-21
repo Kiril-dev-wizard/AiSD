@@ -1,0 +1,18 @@
+digraph Z4 { rankdir=TB; node [shape=box fontname="DejaVu Sans"];
+ start[shape=ellipse label="START"]; init[label="Zeruj liczniki:\nE1c,E2c,E1b,E2b,MaxMoc"];
+ day[label="d := 1"]; sec[label="t := 0 (sekundy w dobie)"];
+ read[label="Wczytaj Mc, Mb, Gd"];
+ tariff[shape=diamond label="Gd w [6,13) lub [15,22) ?"];
+ a1[label="E1c += Mc/3600\nE1b += Mb/3600"];
+ a2[label="E2c += Mc/3600\nE2b += Mb/3600"];
+ maxm[shape=diamond label="Mc > MaxMoc ?"]; setm[label="MaxMoc := Mc"];
+ next[label="t := t + 1"]; dsec[shape=diamond label="t < 86400 ?"];
+ newmonth[shape=diamond label="nowy miesiac ?"]; report[label="Wypisz MaxMoc\nMaxMoc := 0"];
+ nday[label="d := d + 1"]; dend[shape=diamond label="d <= 365 ?"];
+ out[label="Wypisz E1c,E2c,E1b,E2b"]; stop[shape=ellipse label="STOP"];
+ start->init->day->sec->read->tariff;
+ tariff->a1[label="tak: Taryfa I"]; tariff->a2[label="nie: Taryfa II"];
+ a1->maxm; a2->maxm; maxm->setm[label="tak"]; maxm->next[label="nie"]; setm->next;
+ next->dsec; dsec->read[label="tak"]; dsec->newmonth[label="nie"];
+ newmonth->report[label="tak"]; newmonth->nday[label="nie"]; report->nday;
+ nday->dend; dend->sec[label="tak"]; dend->out[label="nie"]; out->stop; }
