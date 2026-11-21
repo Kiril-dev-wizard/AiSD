@@ -1,3 +1,4 @@
+{$mode objfpc}
 program AiSD_C2_Z5;
 uses CRT, math, sysUtils;
 const P_INST = 3.0; DURATION = 10;

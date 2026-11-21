@@ -1,3 +1,4 @@
+{$mode objfpc}
 program AiSD_C2_Z1;
 uses CRT, math, sysUtils;
 var a,b,c,d,x1,x2: real;

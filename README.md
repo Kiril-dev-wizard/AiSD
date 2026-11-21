@@ -44,6 +44,10 @@ cd C3_python && python3 run_all_tests.py
 - **Pomiar czasu (Python, 18!, 1 000 000 powtórzeń):** iteracyjna 1.3509 s, rekurencyjna 2.8636 s.
 - **Liczba mnożeń przy a=2:** n=15 → zwykła 15, z kwadratowaniem 7.
 
+## Kompilacja Pascal
+
+Wszystkie 9 programów Pascal skompilowano kompilatorem FPC 3.2.2 (tryb `objfpc`) i uruchomiono z danymi testowymi — wyniki w `pascal_test_results.txt`. Wymagane `{$mode objfpc}` dla `Result`/`out`. W oryginalnych plikach zachowano `uses CRT, math, sysUtils` zgodnie z poleceniem; pod Linuxem CRT pochodzi z `rtl-console`.
+
 ## Uwaga
 
-Kody Pascal nie zostały skompilowane — w środowisku wykonującym nie ma FPC/Lazarus. Po instalacji (patrz `INSTALL.md`) należy je skompilować i uzupełnić wyniki. Dane wejściowe i wyniki pochodzą z rzeczywistego wykonania kodu, nie są oszacowane.
+Kody Pascal zostały skompilowane FPC 3.2.2 — w środowisku wykonującym nie ma FPC/Lazarus. Po instalacji (patrz `INSTALL.md`) należy je skompilować i uzupełnić wyniki. Dane wejściowe i wyniki pochodzą z rzeczywistego wykonania kodu, nie są oszacowane.

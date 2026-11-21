@@ -1,3 +1,4 @@
+{$mode objfpc}
 program AiSD_C2_Z3;
 uses CRT, math, sysUtils;
 function ReadYear: integer;

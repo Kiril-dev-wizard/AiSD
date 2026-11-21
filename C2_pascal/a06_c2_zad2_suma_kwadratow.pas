@@ -1,3 +1,4 @@
+{$mode objfpc}
 program AiSD_C2_Z2;
 uses CRT, math, sysUtils;
 var L0,n,i: integer; S: int64;

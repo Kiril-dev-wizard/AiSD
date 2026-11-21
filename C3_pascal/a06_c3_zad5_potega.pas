@@ -1,25 +1,26 @@
+{$mode objfpc}
 program AiSD_C3_Z5;
 uses CRT, math, sysUtils;
 var a: real;
 function PowerIter(a: real; n: integer; var counter: integer): real;
-var i: integer; result: real;
-begin result:=1; counter:=0; for i:=1 to n do begin result:=result*a; counter:=counter+1; end; PowerIter:=result; end;
+var i: integer; acc: real;
+begin acc:=1; counter:=0; for i:=1 to n do begin acc:=acc*a; counter:=counter+1; end; PowerIter:=acc; end;
 function PowerRec(a: real; n: integer; var counter: integer): real;
 begin
   if n=0 then begin counter:=0; Result:=1; end
   else begin Result:=a*PowerRec(a,n-1,counter); counter:=counter+1; end;
 end;
 function PowerSquareIter(a: real; n: integer; var counter: integer): real;
-var result,factor: real; e: integer;
+var acc,factor: real; e: integer;
 begin
-  result:=1; factor:=a; e:=n; counter:=0;
+  acc:=1; factor:=a; e:=n; counter:=0;
   while e>0 do
   begin
-    if (e and 1)=1 then begin result:=result*factor; counter:=counter+1; end;
+    if (e and 1)=1 then begin acc:=acc*factor; counter:=counter+1; end;
     factor:=factor*factor; counter:=counter+1; e:=e shr 1;
   end;
   if n>0 then counter:=counter-1;
-  PowerSquareIter:=result;
+  PowerSquareIter:=acc;
 end;
 function PowerSquareRec(a: real; n: integer; var counter: integer): real;
 var half,square: real; c1,c2: integer;

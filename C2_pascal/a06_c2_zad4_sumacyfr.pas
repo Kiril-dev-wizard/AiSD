@@ -1,3 +1,4 @@
+{$mode objfpc}
 program AiSD_C2_Z4;
 uses CRT, math, sysUtils;
 function ReadNumber: integer;

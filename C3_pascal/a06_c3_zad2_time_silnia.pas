@@ -1,3 +1,4 @@
+{$mode objfpc}
 program AiSD_C3_Z2;
 uses CRT, math, sysUtils;
 function FactorialRecursive(n: int64): int64;

@@ -1,0 +1,43 @@
+=== AiSD Pascal compile & run (FPC 3.2.2, Linux x86_64) ===
+DATA: 2026-11-21T07:57:42Z
+
+--- C2 Z1: quadratic (1 -5 6) ---
+rownanie ax^2+bx+c=0
+a = b = c = x1 = 2.0000 x2 = 3.0000
+--- C2 Z1: (1 0 1) no roots ---
+rownanie ax^2+bx+c=0
+a = b = c = brak rozwiazan rzeczywistych
+--- C2 Z2: sum squares L0=1 n=3 ---
+L0 = n = L0=1 n=3 S=14
+--- C2 Z3: leap 2000 / 1900 ---
+R = Rok 2000 jest przestepny
+R = Rok 1900 nie jest przestepny
+--- C2 Z4: digit sum 258 ---
+L = L=258 suma cyfr S=15
+--- C2 Z5: electricity (10 s) ---
+E1_active=0.00498134 kWh
+E2_active=0.00000000 kWh
+E1_reactive=0.00049813 kWh
+E2_reactive=0.00000000 kWh
+Max_power=2.9840 kW
+--- C3 Z1: factorial 18 ---
+n = Silnia iteracyjnie:  6402373705728000
+Silnia rekurencyjnie:6402373705728000
+--- C3 Z2: timing 18! x 100000 ---
+n (0..20) = Liczba powtorzen = Argument silni: 18
+Liczba powtorzen: 100000
+Silnia iteracyjnie: 6402373705728000 czas: 0.0050 s
+Silnia rekurencyjnie: 6402373705728000 czas: 0.0090 s
+--- C3 Z4: digit sum 258 both methods ---
+L = Suma cyfr iteracyjnie:  15
+Suma cyfr rekurencyjnie:15
+--- C3 Z5: power a=2 n=0..15 (selected rows) ---
+a=2.00
+ n | iter      |mul| rec        |mul| sq-iter    |mul| sq-rec     |mul
+  0 |          1 |   0 |          1 |   0 |          1 |   0 |          1 |   0
+  1 |          2 |   1 |          2 |   1 |          2 |   1 |          2 |   2
+  2 |          4 |   2 |          4 |   2 |          4 |   2 |          4 |   3
+  3 |          8 |   3 |          8 |   3 |          8 |   3 |          8 |   4
+  4 |         16 |   4 |         16 |   4 |         16 |   3 |         16 |   4
+  5 |         32 |   5 |         32 |   5 |         32 |   4 |         32 |   5
+  6 |         64 |   6 |         64 |   6 |         64 |   4 |         64 |   5
